@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&family=Ubuntu:wght@300;500;700&display=swap');
 
 body {
-    background-color: #1f1f38;
+    background-color: rgb(58, 145, 148);
 }
 
 * {
@@ -22,6 +22,7 @@ body {
     border-bottom: .5px solid #ffffff52;
     border-width: 80%;
     margin-bottom: 1rem;
+    background-color: rgb(27, 60, 83);
 }
 
 #navbar ul {
@@ -31,6 +32,7 @@ body {
 #navbar ul li {
     margin: 0px 1rem;
 }
+
 
 #navbar ul li a {
     text-decoration: none;
@@ -52,8 +54,8 @@ body {
 
 .nav-col a:hover {
     border-radius: .4rem;
-    color: #1f1f38;
-    background-color: #fff;
+    color: rgb(27, 60, 83)
+    background-color #fff;
 }
 
 
@@ -70,7 +72,7 @@ body {
 
 .home-left h6,
 h4 {
-    color: rgb(216, 117, 173);
+    color: rgb(27, 60, 83);
     margin: 1rem 0;
     margin-left: 3px;
     font-size: 5rem;
@@ -85,211 +87,203 @@ h4 {
 }
 
 .home-right img {
-    position: absolute;
-    width:170%;
-    left: 40px;
-    top: -50px;
-    background-size: cover;
-    border-radius: 84%;
-    height: 150%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    display: block;
+    margin: 0 auto;
 }
-    
+
 
 
 .circle {
-    width: 17rem;
-    height: 17rem;
-    border-radius: 50%;
-    padding: .5rem;
-    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(27, 60, 83);
+    border-radius: 100%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
 }
+
 
 /* About Section */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
 .about-left,
 .about-right {
-    width: 60%;
-}
-
-.about-right {
-    padding-right: 4rem;
-}
-
-.aboout-left {
-    position: relative;
+  flex: 1 1 45%;
 }
 
 .about-left img {
-    width: 100%;
-    height: 400px;;
-    border-radius: 1rem;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+  margin: auto;
+}
+
+.about-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about-content p {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-left,
+  .about-right {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .about-left img {
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
 }
 
 
-/* Skills */
 #skills {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
-.skills-left {
-    width: 50%;
+.skills-circular-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.skills-left img {
-    width: 85%;
+.circular-skill {
+  text-align: center;
 }
 
-.skills-right {
-    width: 50%;
+.skill-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      rgb(27, 60, 83) calc(var(--percent) * 1%),
+      #e0e0e0 0%
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0.5rem
 }
-
-.skillss-container {
-    width: 100%;
-}
-.java {
-    width: 90%;
-    height: .5rem;
-    background-color: #e54c21;
-    margin: 1rem 0;
-    border-radius: 12px;
-}
-
-.html {
-    width: 90%;
-    height: .5rem;
-    background-color:  #00a0e4;
-    margin: 1rem 0;
-    border-radius: 12px;
-}
-
-.css {
-    width: 80%;
-    height: .5rem;
-    background-color:yellow;
-    margin: 1rem 0;
-    border-radius: 12px;
-}
-.cpp {
-    width: 80%;
-    height: .5rem;
-    background-color:rgb(9, 255, 0);
-    margin: 1rem 0;
-    border-radius: 12px;
-}
-
-.js {
-    width: 65%;
-    height: .5rem;
-    background-color:red;
-    margin: 1rem 0;
-    border-radius: 12px;
-}
-
-.python {
-    width: 50%;
-    height: .5rem;
-    background-color: #7952b3;
-    margin: 1rem 0;
-    border-radius: 12px;
-}
-
-
-
-.learning {
-    width: 100%;
-    height: .5rem;
-    background-color: #61dbfb;
-    margin: 1rem 0;
-    border-radius: 12px;
-}
-
-.bar {
-    margin: 2rem 0;
-}
-
-.bar-content {
-    position: absolute;
-    bottom: 10px;
-}
-
-.left {
-    left: 0;
-}
-
-.right-skills {
-    right: 0;
-}
-
-
-
-
 
 /* Projects Section */
 .projects-container {
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
 }
 
-
-
-
 .projects-item {
-    overflow: hidden;
-    width: 20rem;
-    margin: 1rem;
-    background: #2c2c6c;
-    border-radius: 1.5rem;
-    padding: 2rem 1rem;
+    width: 280px;
+    background: rgb(27, 60, 83);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
     text-align: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .projects-item h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .projects-item p {
-    line-height: 20px;
-    font-size: .9rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #ccc;
 }
-
-
-
-/* Contact me Section */
+/* Contact Me Section */
 .form {
     display: flex;
-    width: 80%;
-    padding: 0 2rem;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
     margin: auto;
-    justify-content: center;
-    align-items: center;
+    padding: 2rem 1rem;
+    background-color: rgb(27, 60, 83);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-div {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .form-div input,
-textarea {
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: .5rem;
+.form-div textarea {
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
     width: 100%;
-    margin: 0.5rem 0rem;
-    font-size: .9rem;
+    padding: 0.75rem 1rem;
     background: transparent;
-    margin: 0.5rem 0rem;
-    padding: 0.5rem 1rem;
-    color: rgb(255, 255, 255);
-    resize: none;
+    font-size: 1rem;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
+.form-div input:focus,
+.form-div textarea:focus {
+    border-color: white;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
 
 
 /* Footer Section  */
 #footer {
-    background-color: #010101;
-    padding: 1%;
+    background-color:  rgb(27, 60, 83);  
     padding-bottom: 2rem;
 }
 
@@ -424,30 +418,53 @@ ul li a:hover {
     margin: auto;
 }
 
+/* === BUTTON BASE === */
 .btn {
-    margin-left: 0 .5rem;
-    font-size: 1rem;
-    color: #df77ad;
-    cursor: pointer;
-    padding: 0.75rem 1.2rem;
-    border: 1px solid #dc85a7;
-    border-radius: 0.4rem;
-    background: transparent;
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid rgb(51, 91, 119);
+  background-color: transparent;
+  color: rgb(27, 60, 83);
 }
 
-.buttons a,
-#hireme {
-    text-decoration: none;
-}
-
-.btn:hover {
-    color: #1f1f38;
-    border-color: #fff;
-    background-color: #fff;
-}
-
+/* === VARIANTS === */
+.github-btn,
 .live {
-    color: #1f1f38;
-    background-color: #da7fa8;
+  background-color: rgb(27, 60, 83);
+  color: white;
+  border-color: white;
 }
+
+/* Optional: override .live text color */
+.live {
+  color: #e7e7e9;
+}
+
+/* === HOVER EFFECTS === */
+.btn:hover {
+  background-color: white;
+  color: rgb(27, 60, 83);
+  border-color: rgb(27, 60, 83);
+}
+
+/* === BUTTON CONTAINER === */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.send-btn {
+  background-color: rgb(27, 60, 83);
+  color: white;
+  border-color: white;
+}
+
